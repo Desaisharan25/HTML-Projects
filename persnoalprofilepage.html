@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Profile — Sharan Desai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#97a0b8;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      --radius:16px;
+      --container:1100px;
+      color-scheme: dark;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071022 0%, #081229 60%);color:#e6eef8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+    .wrap{width:100%;max-width:var(--container)}
+
+    .profile-card{display:grid;grid-template-columns:320px 1fr;gap:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));padding:28px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+
+    .left{padding:22px;background:var(--card);border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:18px}
+    .avatar{width:150px;height:150px;border-radius:22px;overflow:hidden;border:4px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0b1220,#0f2233)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{margin:0;font-size:1.4rem}
+    .sub{color:var(--muted);font-size:0.9rem}
+    .cta-row{display:flex;gap:10px;width:100%;justify-content:center}
+    .btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;font-weight:600;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#3ee7c8);color:#021018;border:none}
+    .info-list{width:100%;display:flex;flex-direction:column;gap:8px;margin-top:6px}
+    .info-item{display:flex;justify-content:space-between;color:var(--muted);font-size:0.95rem;padding:8px 10px;border-radius:10px;background:var(--glass)}
+
+    .right{padding:18px 20px;background:transparent}
+    .bio{color:var(--muted);line-height:1.5;margin-bottom:14px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+    .chip{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.02);font-weight:600;font-size:0.85rem}
+
+    .section{background:rgba(255,255,255,0.02);padding:14px;border-radius:12px;margin-bottom:12px}
+    .section h3{margin:0 0 8px 0;font-size:1rem}
+    .project{display:flex;flex-direction:column;gap:6px;padding:8px;border-radius:10px}
+    .project .meta{color:var(--muted);font-size:0.9rem}
+    .skill-bar{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+    .skill-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#6ee7b7,#3ee7c8)}
+
+    .contact-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+    .contact-item{padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);font-weight:600}
+
+    footer{color:var(--muted);text-align:center;margin-top:14px;font-size:0.9rem}
+
+    @media (max-width:880px){
+      .profile-card{grid-template-columns:1fr;}
+      .left{flex-direction:row;align-items:center;padding:12px}
+      .avatar{width:96px;height:96px;border-radius:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="profile-card">
+      <aside class="left">
+        <div class="avatar" id="avatar">
+          <img src="C:\Users\sharan\Downloads\WhatsApp Image 2025-10-31 at 12.28.19_77946af4.jpg" alt="Your Photo">
+        </div>
+        <div style="text-align:center">
+          <h1 id="name">Sharan Desai</h1>
+          <div class="sub" id="role">Cloud & Application Developer - Data Scientist/Analyst</div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn primary" id="downloadCV">Download CV</button>
+          <button class="btn" id="copyEmail">Copy Email</button>
+        </div>
+
+        <div class="info-list">
+          <div class="info-item"><span>Location</span><span>Ahmedabad, India</span></div>
+          <div class="info-item"><span>Experience</span><span>Freshers</span></div>
+        </div>
+      </aside>
+
+      <main class="right">
+        <p class="bio">Hi — I'm <strong>Sharan Desai</strong>, a developer who loves building clean, user-friendly apps and turning data into insights. I focus on web development, data analysis, and product design. Below are a few highlights.</p>
+
+        <div class="chips">
+          <div class="chip">JavaScript</div>
+          <div class="chip">React</div>
+          <div class="chip">Node.js</div>
+          <div class="chip">Python</div>
+          <div class="chip">SQL</div>
+        </div>
+
+        <div class="section">
+          <h3>Featured Projects</h3>
+          <div class="project">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>MovieRecs — Recommendation App</strong>
+              <span class="meta">React • PHP • MySQL</span>
+            </div>
+            <div class="meta">A personalized movie recommendation site with community features and saved lists.</div>
+          </div>
+          <hr style="opacity:0.06;margin:10px 0">
+          <div class="project">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Studio Booking System</strong>
+              <span class="meta">PHP • MySQL • Stripe</span>
+            </div>
+            <div class="meta">End-to-end booking system for studio owners with admin/editor roles and payment integration.</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Skills</h3>
+          <div style="display:grid;grid-template-columns:1fr 160px;gap:10px;align-items:center;margin-bottom:8px">
+            <div>Frontend (React / HTML / CSS)</div>
+            <div class="skill-bar" aria-hidden><div class="skill-fill" style="width:84%"></div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 160px;gap:10px;align-items:center;margin-bottom:8px">
+            <div>Backend & Databases</div>
+            <div class="skill-bar" aria-hidden><div class="skill-fill" style="width:72%"></div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 160px;gap:10px;align-items:center">
+            <div>Data Analysis & ML</div>
+            <div class="skill-bar" aria-hidden><div class="skill-fill" style="width:62%"></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Contact</h3>
+          <div class="contact-row">
+            <div class="contact-item">Email:<span id="emailVal" style="font-weight:700;margin-left:8px">desaisharan25@gmail.com</span></div>
+            <div class="contact-item">Phone: +91 9104797225</div>
+            <div class="contact-item">LinkedIn</div>
+          </div>
+        </div>
+
+        <footer>Made with ❤️ </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const email = 'desaisharan25@gmail.com';
+    document.getElementById('copyEmail').addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(email);
+        const btn = document.getElementById('copyEmail');
+        btn.textContent = 'Copied!';
+        setTimeout(()=> btn.textContent = 'Copy Email',1500);
+      }catch(e){alert('Unable to copy — please copy manually: ' + email)}
+    });
+
+    document.getElementById('downloadCV').addEventListener('click', ()=>{
+      const text = `Name: Sharan Desai\nRole: Data Scientist/Analyst\nEmail: ${email}\n\nSummary:\n- Short summary about you.\n`;
+      const blob = new Blob([text], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'SharanDesai_CV.txt'; document.body.appendChild(a); a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); },1000);
+    });
+
+    window.Profile = {
+      setName(n){ document.getElementById('name').textContent = n },
+      setRole(r){ document.getElementById('role').textContent = r },
+      setEmail(e){ document.getElementById('emailVal').textContent = e; window.email = e },
+      setAvatar(src){ document.querySelector('#avatar img').src = src }
+    };
+  </script>
+</body>
+</html>
